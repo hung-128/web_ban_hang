@@ -133,6 +133,16 @@ return [
         'attribute-name' => [
             'rule-name' => 'custom-message',
         ],
+        'email' => [
+            'required' => 'email required',
+            'email' => 'email ko dung dinh dang'
+        ],
+        'name' => [
+            'required' => 'name required'
+        ],
+        'password' => [
+            'required' => 'password required'
+        ]
     ],
 
     /*
