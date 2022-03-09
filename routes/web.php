@@ -21,4 +21,7 @@ Auth::routes();
 
 
 Route::get('/home', 'HomeController@index')->name('home')->middleware('verified');
+Route::prefix('home')->middleware('auth')->group(function () {
+    Route::get('category', 'BookController@bookList')->name('bookList');
+});
 
