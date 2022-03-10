@@ -11,8 +11,8 @@ class BookController extends Controller
     {
         return view("books");
     }
-    public function detailBook($id)
+    public function bookDetail()
     {
-        
+        return view("book-detail");
     }
 }
