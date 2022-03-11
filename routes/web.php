@@ -26,6 +26,6 @@ Route::prefix('home')->middleware('auth')->group(function () {
     Route::get('book-detail', 'BookController@bookDetail')->name('bookDeatail');
     Route::get('news', 'NewsController@newsList')->name('newsList');
     Route::get('news-detail', 'NewsController@newsDetail')->name('newsDetail');
-    Route::get('authors', 'NewsController@authorList')->name('authorList');
+    Route::get('authors', 'AuthorController@authorList')->name('authorList');
 });
 
