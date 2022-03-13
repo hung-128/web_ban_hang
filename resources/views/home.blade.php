@@ -1,11 +1,12 @@
 @extends('layouts.app')
 
 @section('content')
-    @include('components.home.best_selling')
-    @include('components.home.fearture_item')
-    @include('components.home.new_release')
-    @include('components.home.collection_count')
-    @include('components.home.picked_author')
-    @include('components.home.testimonials')
-    @include('components.home.call_to_action')
+    <x-home.best-selling/>
+    <x-home.fearture-item/>
+    <x-home.new-release/>
+    <x-home.collection-count/>
+    <x-home.picked-author/>
+    <x-home.testimonials/>
+    <x-home.call-to-action/>
+    <x-home.lastest-new/>
 @endsection

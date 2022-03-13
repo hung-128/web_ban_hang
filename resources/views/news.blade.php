@@ -6,7 +6,7 @@
         <div class="container">
             <div class="row">
                 <div id="tg-twocolumns" class="tg-twocolumns">
-                    @include('layouts.products.content_right')
+                    @include('layouts.news.content-right-news')
                     @include('layouts.products.content_left')
                 </div>
             </div>

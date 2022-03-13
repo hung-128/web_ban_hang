@@ -50,9 +50,9 @@
                     <div class="dropdown  tg-userlogin">
                         <div class="btn dropdown-toggle" role="button" id="dropdownMenuLink" href="#"
                             data-toggle="dropdown">
-                            <figure><a href="javascript:void(0);"><img src="images/users/img-01.jpg"
+                            <figure><a href="javascript:void(0);"><img src="{{asset('images/users/img-01.jpg')}}"
                                         alt="image description"></a></figure>
-                            <span>Hi, {{ $user->name }}</span>
+                            <span>Hi, {{ Auth::user()->name }}</span>
                         </div>
                         <ul class="dropdown-menu " aria-labelledby="dropdownMenuButton">
                             <li style="list-style: none">
@@ -75,7 +75,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                    <strong class="tg-logo"><a href="index-2.html"><img src="images/logo.png"
+                    <strong class="tg-logo"><a href="index-2.html"><img src="{{asset('images/logo.png')}}"
                                 alt="company name here"></a></strong>
                     <div class="tg-wishlistandcart">
                         <div class="dropdown tg-themedropdown tg-wishlistdropdown">
