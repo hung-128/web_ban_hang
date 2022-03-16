@@ -10,4 +10,8 @@ class AuthorController extends Controller
     {
         return view('authors');
     }
+    public function authorDetail(Type $var = null)
+    {
+        return view('author-detail');
+    }
 }

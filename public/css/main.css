@@ -1215,12 +1215,13 @@ li.menu-item-has-mega-menu { position: static; }
 	margin: 0;
 	width: 100%;
 	float: left;
-	display: table;
+	display: flex;
+	flex-wrap: wrap;
 	table-layout: fixed;
 }
 .mega-menu .tg-themetabcontent > div > ul > li {
 	padding: 0 15px;
-	display: table-cell;
+	width: 30%;
 }
 .tg-linkstitle {
 	width: 100%;

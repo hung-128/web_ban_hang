@@ -264,6 +264,32 @@
                                                         </ul>
                                                         <a class="tg-btnviewall" href="products.html">View All</a>
                                                     </li>
+                                                    <li>
+                                                        <div class="tg-linkstitle">
+                                                            <h2>History</h2>
+                                                        </div>
+                                                        <ul>
+                                                            <li><a href="products.html">Veniam quis nostrud</a></li>
+                                                            <li><a href="products.html">Exercitation</a></li>
+                                                            <li><a href="products.html">Laboris nisi ut aliuip</a></li>
+                                                            <li><a href="products.html">Commodo conseat</a></li>
+                                                            <li><a href="products.html">Duis aute irure</a></li>
+                                                        </ul>
+                                                        <a class="tg-btnviewall" href="products.html">View All</a>
+                                                    </li>
+                                                    <li>
+                                                        <div class="tg-linkstitle">
+                                                            <h2>History</h2>
+                                                        </div>
+                                                        <ul>
+                                                            <li><a href="products.html">Veniam quis nostrud</a></li>
+                                                            <li><a href="products.html">Exercitation</a></li>
+                                                            <li><a href="products.html">Laboris nisi ut aliuip</a></li>
+                                                            <li><a href="products.html">Commodo conseat</a></li>
+                                                            <li><a href="products.html">Duis aute irure</a></li>
+                                                        </ul>
+                                                        <a class="tg-btnviewall" href="products.html">View All</a>
+                                                    </li>
                                                 </ul>
                                                 <ul>
                                                     <li>
@@ -814,11 +840,7 @@
                                     </ul>
                                 </li>
                                 <li class="menu-item-has-children">
-                                    <a href="javascript:void(0);">Authors</a>
-                                    <ul class="sub-menu">
-                                        <li><a href="authors.html">Authors</a></li>
-                                        <li><a href="authordetail.html">Author Detail</a></li>
-                                    </ul>
+                                    <a href="{{route('authorList')}}">Authors</a>    
                                 </li>
                                 <li><a href="products.html">Best Selling</a></li>
                                 <li><a href="products.html">Weekly Sale</a></li>
