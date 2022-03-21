@@ -28,4 +28,7 @@ Route::prefix('home')->middleware('auth')->group(function () {
     Route::get('news-detail', 'NewsController@newsDetail')->name('newsDetail');
     Route::get('authors', 'AuthorController@authorList')->name('authorList');
 });
+Route::get('/contact', 'PageController@contact')->name('contact');
+Route::get('/about', 'PageController@about')->name('about');
+Route::get('/commingSoon', 'PageController@commingSoon')->name('commingSoon');
 
