@@ -43,10 +43,11 @@ class LoginController extends Controller
         $credentials = $request->only('email', 'password');
         if (Auth::attempt($credentials)) {
             $request->session()->regenerate();
- 
-            return redirect()->intended('/home');
+            if (auth()->user()->is_admin === 1) {
+                return redirect()->intended('/admin/home');
+            }
+            return redirect()->intended('home');
         }
- 
         return back()->withErrors([
             'email' => 'The provided credentials do not match our records.',
         ]);
