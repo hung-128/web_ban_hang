@@ -1,46 +1,21 @@
-<!doctype html>
-<html class="no-js" ">
-
+<!DOCTYPE html>
+<html lang="en">
 <head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	 <title>home</title>
-	<meta name="description" content="">
-    <meta name="csrf-token" content="{{ csrf_token() }}">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="apple-touch-icon" href="apple-touch-icon.png">
-	<link rel="stylesheet" href="{{asset('css/bootstrap.min.css')}}">
-	<link rel="stylesheet" href="{{asset('css/normalize.css')}}">
-	<link rel="stylesheet" href="{{asset('css/font-awesome.min.css')}}">
-	<link rel="stylesheet" href="{{asset('css/icomoon.css')}}">
-	<link rel="stylesheet" href="{{asset('css/jquery-ui.css')}}">
-	<link rel="stylesheet" href="{{asset('css/owl.carousel.css')}}">
-	<link rel="stylesheet" href="{{asset('css/transitions.css')}}">
-	<link rel="stylesheet" href="{{asset('css/main.css')}}">
-	<link rel="stylesheet" href="{{asset('css/color.css')}}">
-	<link rel="stylesheet" href="{{asset('css/responsive.css')}}">
-	<script src="{{asset('js/vendor/modernizr-2.8.3-respond-1.4.2.min.js')}}"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+        integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+    <link href="{{ asset('css/auth/login.css') }}" rel="stylesheet">
 </head>
-
-<body class="tg-home tg-homeone">
-    @include('layouts.header')
-    
-	<div id="tg-wrapper" class="tg-wrapper tg-haslayout">
-        @yield('content')
-    </div>
-    @include('layouts.footer')
+<body>
+    @yield('content')
 </body>
-
-<script src="{{asset('js/vendor/jquery-library.js')}}"></script>
-<script src="{{asset('js/vendor/bootstrap.min.js')}}"></script>
-<script src="https://maps.google.com/maps/api/js?key=AIzaSyCR-KEWAVCn52mSdeVeTqZjtqbmVJyfSus&amp;language=en"></script>
-<script src="{{asset('js/owl.carousel.min.js')}}"></script>
-<script src="{{asset('js/jquery.vide.min.js')}}"></script>
-<script src="{{asset('js/countdown.js')}}"></script>
-<script src="{{asset('js/jquery-ui.js')}}"></script>
-<script src="{{asset('js/parallax.js')}}"></script>
-<script src="{{asset('js/countTo.js')}}"></script>
-<script src="{{asset('js/appear.js')}}"></script>
-<script src="{{asset('js/gmap3.js')}}"></script>
-<script src="{{asset('js/main.js')}}"></script>
 </html>
+
+<script src="{{ asset('js/auth/login.js') }}" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"
+integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>

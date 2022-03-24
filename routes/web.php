@@ -29,4 +29,8 @@ Route::prefix('home')->middleware('auth')->group(function () {
     Route::get('authors', 'AuthorController@authorList')->name('authorList');
     Route::get('author-detail', 'AuthorController@authorDetail')->name('authorDetail');
 });
+Route::get('/contact', 'PageController@contact')->name('contact');
+Route::get('/about', 'PageController@about')->name('about');
+Route::get('/commingSoon', 'PageController@commingSoon')->name('commingSoon');
+Route::get('admin/home', 'HomeController@adminHome')->name('admin.home')->middleware('is_admin');
 
