@@ -65,6 +65,11 @@
                                     @csrf
                                 </form>
                             </li>
+                            <li style="list-style: none">
+                                <a class="dropdown-item" href="{{ route('password.confirm') }}" >
+                                    Change password
+                                </a>
+                            </li>
                         </ul>
                     </div>
                 </div>

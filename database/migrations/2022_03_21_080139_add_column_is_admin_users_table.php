@@ -15,7 +15,7 @@ class AddColumnIsAdminUsersTable extends Migration
     {
         Schema::table('users', function (Blueprint $table) {
             if (!Schema::hasColumn('users','is_admin')) {
-                $table->integer('is_admin');
+                $table->integer('is_admin')->default(0);
             }
             
         });
