@@ -32,5 +32,11 @@ Route::prefix('home')->middleware('auth')->group(function () {
 Route::get('/contact', 'PageController@contact')->name('contact');
 Route::get('/about', 'PageController@about')->name('about');
 Route::get('/commingSoon', 'PageController@commingSoon')->name('commingSoon');
-Route::get('admin/home', 'HomeController@adminHome')->name('admin.home')->middleware('is_admin');
 
+Route::prefix('admin')->middleware('auth', 'is_admin')->group(function () {
+    Route::get('home', 'HomeController@adminHome')->name('admin.home');
+    Route::get('users', 'UserController@userList')->name('admin.listUser');
+    Route::get('authors', 'AuthorController@authorList')->name('admin.authorList');
+    Route::get('news', 'NewsController@listNews')->name('admin.listNews');
+    Route::get('categories', 'CategoryController@listCategory')->name('admin.listCategory');
+});
