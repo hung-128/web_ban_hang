@@ -13,6 +13,11 @@
     <link rel="stylesheet" href="{{ asset('plugins/fontawesome-free/css/all.min.css') }}">
     <!-- Theme style -->
     <link rel="stylesheet" href="{{ asset('css/admin/adminlte.min.css') }}">
+
+    @foreach ($css as $url)
+        <link rel="stylesheet" href="{{ asset($url) }}">
+    @endforeach
+
 </head>
 
 <body class="hold-transition sidebar-mini">
@@ -27,7 +32,7 @@
                     <div class="container-fluid">
                         <div class="row mb-2">
                             <div class="col-sm-6">
-                                <h1 class="m-0">Dashboard</h1>
+                                <h1 class="m-0">{!! $title !!} </h1>
                             </div><!-- /.col -->
                             <div class="col-sm-6">
                                 <ol class="breadcrumb float-sm-right">
@@ -52,6 +57,11 @@
     <script src="{{ asset('js/admin/adminlte.min.js') }}"></script>
     <!-- AdminLTE for demo purposes -->
     <script src="{{ asset('js/admin/demo.js') }}"></script>
+
+    @foreach ($js as $url)
+        <script src="{{ asset($url) }}"></script>
+    @endforeach
+
 </body>
 
 </html>

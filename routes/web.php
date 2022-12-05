@@ -39,4 +39,8 @@ Route::prefix('admin')->middleware('auth', 'is_admin')->group(function () {
     Route::get('authors', 'AuthorController@authorList')->name('admin.authorList');
     Route::get('news', 'NewsController@listNews')->name('admin.listNews');
     Route::get('categories', 'CategoryController@listCategory')->name('admin.listCategory');
+    Route::prefix('books')->group(function () {
+        Route::get('create', 'Admin\BookController@create')->name('admin.createBook');
+    });
+
 });
