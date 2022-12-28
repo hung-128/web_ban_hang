@@ -21,6 +21,10 @@ Auth::routes();
 
 
 Route::get('/home', 'HomeController@index')->name('home')->middleware('verified');
+Route::get('/demo', 'HomeController@demo')->name('demo');
+Route::get('/updateStatusWithChunkById', 'PageController@updateStatusWithChunkById')->name('chunkById');
+Route::get('/updateStatusWithChunk', 'PageController@updateStatusWithChunk')->name('chunk');
+Route::get('/demo', 'HomeController@demo')->name('demo');
 Route::prefix('home')->middleware('auth')->group(function () {
     Route::get('category', 'BookController@bookList')->name('bookList');
     Route::get('book-detail', 'BookController@bookDetail')->name('bookDeatail');
@@ -29,7 +33,7 @@ Route::prefix('home')->middleware('auth')->group(function () {
     Route::get('authors', 'AuthorController@authorList')->name('authorList');
     Route::get('author-detail', 'AuthorController@authorDetail')->name('authorDetail');
 });
-Route::get('/contact', 'PageController@contact')->name('contact');
+Route::get('/demoChunk', 'PageController@contact')->name('contact');
 Route::get('/about', 'PageController@about')->name('about');
 Route::get('/commingSoon', 'PageController@commingSoon')->name('commingSoon');
 

@@ -47,17 +47,17 @@
         }
 
         .thumb {
-            height: 80px;
-            width: 100px;
-            border: 1px solid #000;
+            height: 160px;
+            width: 200px;
+            border-radius: 10px;
         }
 
         ul.thumb-Images li {
-            width: 120px;
+            width: 200px;
             float: left;
             display: inline-block;
             vertical-align: top;
-            height: 120px;
+            height: 200px;
         }
 
         .img-wrap {
@@ -142,7 +142,7 @@
                                 <div class="form-group">
                                     <label for="customFile">Ảnh chính</label>
                                     <div class="custom-file">
-                                        <input type="file" class="custom-file-input" id="files" multiple accept="image/jpeg, image/png, image/gif,">
+                                        <input type="file" class="custom-file-input" id="files" accept="image/jpeg, image/png, image/gif,">
                                         <label class="custom-file-label" for="customFile">Choose file</label>
                                     </div>
                                 </div>
