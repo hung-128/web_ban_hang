@@ -46,5 +46,8 @@ Route::prefix('admin')->middleware('auth', 'is_admin')->group(function () {
     Route::prefix('books')->group(function () {
         Route::get('create', 'Admin\BookController@create')->name('admin.createBook');
     });
+    Route::prefix('role-permission')->group(function () {
+        Route::get('create/{id?}', 'Admin\RolePermissionController@createEditView')->name('admin.createRolePermission')->where('id', '[0-9]+');
+    });
 
 });
