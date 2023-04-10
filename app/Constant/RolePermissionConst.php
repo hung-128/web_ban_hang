@@ -3,11 +3,11 @@ namespace App\Constant;
 
 class RolePermissionConst
 {
-    const User = 'User';
-    const Category = 'Category';
-    const Role = 'Role';
-    const Author = 'Author';
-    const Book = 'Book';
+    const User = 'Users';
+    const Category = 'Categories';
+    const Role = 'Roles';
+    const Author = 'Authors';
+    const Book = 'Books';
     const News = 'News';
 
     public static $module = [

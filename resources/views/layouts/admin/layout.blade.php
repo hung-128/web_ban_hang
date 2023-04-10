@@ -14,9 +14,9 @@
     <!-- Theme style -->
     <link rel="stylesheet" href="{{ asset('css/admin/adminlte.min.css') }}">
 
-    @foreach ($css as $url)
-        <link rel="stylesheet" href="{{ asset($url) }}">
-    @endforeach
+{{--    @foreach ($css ?? '' as $url)--}}
+{{--        <link rel="stylesheet" href="{{ asset($url) }}">--}}
+{{--    @endforeach--}}
 
 </head>
 
@@ -32,7 +32,7 @@
                     <div class="container-fluid">
                         <div class="row mb-2">
                             <div class="col-sm-6">
-                                <h1 class="m-0">{!! $title !!} </h1>
+                                <h1 class="m-0"> </h1>
                             </div><!-- /.col -->
                             <div class="col-sm-6">
                                 <ol class="breadcrumb float-sm-right">
@@ -58,9 +58,9 @@
     <!-- AdminLTE for demo purposes -->
     <script src="{{ asset('js/admin/demo.js') }}"></script>
 
-    @foreach ($js as $url)
-        <script src="{{ asset($url) }}"></script>
-    @endforeach
+{{--    @foreach ($js as $url)--}}
+{{--        <script src="{{ asset($url) }}"></script>--}}
+{{--    @endforeach--}}
 
 </body>
 

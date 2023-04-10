@@ -47,7 +47,10 @@ Route::prefix('admin')->middleware('auth', 'is_admin')->group(function () {
         Route::get('create', 'Admin\BookController@create')->name('admin.createBook');
     });
     Route::prefix('role-permission')->group(function () {
-        Route::get('create/{id?}', 'Admin\RolePermissionController@createEditView')->name('admin.createRolePermission')->where('id', '[0-9]+');
+        Route::get('createView/{id?}', 'Admin\RolePermissionController@createEditView')->name('admin.createRolePermission')->where('id', '[0-9]+');
+        Route::post('create/{id?}', 'Admin\RolePermissionController@createEdit')->name('admin.createRolePermissionProcess')->where('id', '[0-9]+');
+        Route::get('list', 'Admin\RolePermissionController@list')->name('admin.listRolePermission');
     });
-
 });
+
+Route::get('sheet', 'SheetController@getSheet');
