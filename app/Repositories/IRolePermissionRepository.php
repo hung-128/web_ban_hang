@@ -9,5 +9,5 @@ interface IRolePermissionRepository {
      * @param array $command
      * @return bool
      */
-    public function createEdit(array $command):bool;
+    public function createEdit(array $command, array $commandPermission):bool;
 }

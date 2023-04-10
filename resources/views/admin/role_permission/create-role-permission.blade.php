@@ -20,6 +20,9 @@
                 <div class="form-group">
                     <label for="role_name">Role</label>
                     <input type="text" class="form-control" id="role_name" name="role_name" placeholder="Enter role name">
+{{--                    @error('role_name')--}}
+{{--                    <p style="color: red">{{ $message }}</p>--}}
+{{--                    @enderror--}}
                 </div>
                 <label for="role_name">Permission</label>
                 <div class="card card-success">
