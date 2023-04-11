@@ -54,3 +54,6 @@ Route::prefix('admin')->middleware('auth', 'is_admin')->group(function () {
 });
 
 Route::get('sheet', 'SheetController@getSheet');
+Route::get('chunk', 'TestController@chunk');
+Route::get('chunkById', 'TestController@chunkById');
+
