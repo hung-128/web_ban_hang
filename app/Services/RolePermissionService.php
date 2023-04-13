@@ -19,16 +19,14 @@ class RolePermissionService {
         $this->rolePermissionRepository = $rolePermissionRepository;
     }
 
-    public function createEdit($commandRole, $commandPermission){
+    /**
+     * @param $commandRole
+     * @param $commandPermission
+     * @return void
+     */
+    public function store($commandRole, $commandPermission){
         try {
-            $id = $commandRole['id'];
-            if ($id){
-                $rolePermission = $this->rolePermissionRepository->find($id);
-                if (!$rolePermission) {
-                    throw new NotFoundHttpException('ID role không đúng');
-                }
-            }
-            $result = $this->rolePermissionRepository->createEdit($commandRole, $commandPermission);
+            $result = $this->rolePermissionRepository->createRole($commandRole, $commandPermission);
             if (!$result){
                 throw new AppException('Lưu không thành công');
             }
@@ -36,5 +34,13 @@ class RolePermissionService {
         } catch( Exception $e){
             DB::rollBack();
         }
+    }
+
+    public function edit($roleId) {
+        $role = $this->rolePermissionRepository->find($roleId);
+        if(!$role){
+            throw new NotFoundHttpException('Không tìm thấy Role');
+        }
+        return $role;
     }
 }

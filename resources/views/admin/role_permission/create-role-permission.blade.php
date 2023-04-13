@@ -4,7 +4,7 @@
 
 
     <div class="row" style="margin-left: 5px; margin-bottom: 5px">
-        <a href="{{route('admin.createRolePermission')}}" class="btn btn-primary">Create</a>
+        <a href="{{route('admin.create')}}" class="btn btn-primary">Create</a>
         <a href="{{route('admin.listRolePermission')}}" class="btn btn-primary">List</a>
     </div>
 
@@ -14,7 +14,7 @@
         <!-- /.card-header -->
         <!-- form start -->
 
-        <form action="{{route('admin.createRolePermissionProcess')}}" method="POST">
+        <form action="{{route('admin.store')}}" method="POST">
             @csrf
             <div class="card-body">
                 <div class="form-group">

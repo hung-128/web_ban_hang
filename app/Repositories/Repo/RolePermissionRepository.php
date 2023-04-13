@@ -13,14 +13,13 @@ class RolePermissionRepository extends BaseRepository implements IRolePermission
      */
     public function getModel(): string
     {
-        return RolePermission::class;
+        return Role::class;
     }
 
-    public function createEdit(array $command, array $commandPermission): bool
+    public function createRole(array $command, array $commandPermission): bool
     {
         $role = new Role();
         $role->name = $command['role_name'];
-//        dd($commandPermission);
         $role->save();
         foreach ($commandPermission as $module => $index) {
             foreach ($index as $value) {

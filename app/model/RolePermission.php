@@ -14,4 +14,12 @@ class RolePermission extends Model
     protected $table = 'role_permission';
 
     protected $fillable = ['role_id', 'module', 'value'];
+
+    /**
+     * Get the role that owns the comment.
+     */
+    public function role()
+    {
+        return $this->belongsTo('App\model\Role');
+    }
 }
