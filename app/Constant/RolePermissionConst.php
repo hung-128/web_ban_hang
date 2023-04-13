@@ -18,4 +18,7 @@ class RolePermissionConst
         self::Role => 'roles',
         self::Author => 'author'
     ];
+    const CREATE_VALUE = 20;
+    const EDIT_VALUE = 10;
+    const VIEW_VALUE = 0;
 }

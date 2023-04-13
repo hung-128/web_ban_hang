@@ -47,11 +47,11 @@ Route::prefix('admin')->middleware('auth', 'is_admin')->group(function () {
         Route::get('create', 'Admin\BookController@create')->name('admin.createBook');
     });
     Route::prefix('role-permission')->group(function () {
-        Route::get('create', 'Admin\RolePermissionController@create')->name('admin.create');
-        Route::post('store', 'Admin\RolePermissionController@store')->name('admin.store');
-        Route::get('edit/{id?}', 'Admin\RolePermissionController@edit')->name('admin.edit')->where('id', '[0-9]+');
+        Route::get('create', 'Admin\RolePermissionController@create')->name('role-permission.create');
+        Route::post('store', 'Admin\RolePermissionController@store')->name('role-permission.store');
+        Route::get('edit/{id?}', 'Admin\RolePermissionController@edit')->name('role-permission.edit')->where('id', '[0-9]+');
         Route::post('update/{id?}', 'Admin\RolePermissionController@update')->name('admin.update')->where('id', '[0-9]+');
-        Route::get('list', 'Admin\RolePermissionController@list')->name('admin.listRolePermission');
+        Route::get('list', 'Admin\RolePermissionController@list')->name('role-permission.list');
     });
 });
 

@@ -44,6 +44,7 @@
                     </div><!-- /.container-fluid -->
                 </div>
                 <!-- /.content-header -->
+
                 @yield('content')
             </div>
         </div>

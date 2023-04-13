@@ -16,13 +16,19 @@ class RolePermissionRepository extends BaseRepository implements IRolePermission
         return Role::class;
     }
 
-    public function createRole(array $command, array $commandPermission): bool
+    /**
+     * @param array $command
+     * @param array $commandPermission
+     * @return int
+     */
+    public function createRole(array $command, array $commandPermission): int
     {
         $role = new Role();
         $role->name = $command['role_name'];
         $role->save();
         foreach ($commandPermission as $module => $index) {
-            foreach ($index as $value) {
+            $value = implode(",", $index);
+            if (!empty($value)){
                 RolePermission::insert([
                     'role_id' => $role->id,
                     'module' => $module,
@@ -30,7 +36,6 @@ class RolePermissionRepository extends BaseRepository implements IRolePermission
                 ]);
             }
         }
-
-        return true;
+        return $role->id;
     }
 }

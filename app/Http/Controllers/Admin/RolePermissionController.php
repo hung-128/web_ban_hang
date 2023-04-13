@@ -46,19 +46,18 @@ class RolePermissionController extends Controller
         ];
         $validated = $request->validated();
 
-        $rolePermissionService = $this->rolePermissionService->store($commandRole, $commandPermission);
-
-        $modules = RolePermissionConst::$module;
-        return view('admin.role_permission.create-role-permission', ['modules' => $modules]);
+        $roleId = $this->rolePermissionService->store($commandRole, $commandPermission);
+        return redirect()->route('role-permission.edit', ['id' => $roleId]);
     }
 
     public function edit($roleId, Request $request){
         $rolePermission = $this->rolePermissionService->edit($roleId);
         $roleResource = new RoleResource($rolePermission);
         $result = $roleResource->toArray($request);
-        dd($result);
+        $roleResult =  $result['role'];
+        $rolePermissionResult = $result['role_permission'];
 
-        return view('admin.role_permission.create-role-permission', ['modules' => RolePermissionConst::$module]);
+        return view('admin.role_permission.create-role-permission', ['modules' => RolePermissionConst::$module, 'role' => $roleResult, 'rolePermissions' => $rolePermissionResult]);
     }
 
     public function update(Request $request){

@@ -17,7 +17,7 @@ class TestController extends Controller
     }
     public function chunkById(){
         Test::where('status', true)
-            ->chunkById(200, function (Collection $tests) {
+            ->chunkById(10, function (Collection $tests) {
                 $tests->each->update(['status' => false]);
             }, $column = 'id');
     }

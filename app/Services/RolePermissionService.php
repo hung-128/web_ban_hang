@@ -22,18 +22,16 @@ class RolePermissionService {
     /**
      * @param $commandRole
      * @param $commandPermission
-     * @return void
+     * @return int
      */
     public function store($commandRole, $commandPermission){
         try {
             $result = $this->rolePermissionRepository->createRole($commandRole, $commandPermission);
-            if (!$result){
-                throw new AppException('Lưu không thành công');
-            }
             DB::commit();
         } catch( Exception $e){
             DB::rollBack();
         }
+        return $result;
     }
 
     public function edit($roleId) {

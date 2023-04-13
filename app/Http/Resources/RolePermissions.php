@@ -14,14 +14,15 @@ class RolePermissions extends ResourceCollection
      */
     public function toArray($request)
     {
-        return
-            $this->collection->map(function ($rolePermission) {
-            return [
+        $data = [];
+        foreach ($this->collection as $rolePermission){
+            $data[$rolePermission->module] = [
                 'id' => $rolePermission->id,
                 'role_id' => $rolePermission->role_id,
                 'module' => $rolePermission->module,
-                'value' => $rolePermission->value,
+                'value' => explode(",", $rolePermission->value),
             ];
-        })->toArray();
+        }
+        return $data;
     }
 }
