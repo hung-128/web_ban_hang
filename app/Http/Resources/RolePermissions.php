@@ -22,6 +22,6 @@ class RolePermissions extends ResourceCollection
                 'module' => $rolePermission->module,
                 'value' => $rolePermission->value,
             ];
-        })->all();
+        })->toArray();
     }
 }

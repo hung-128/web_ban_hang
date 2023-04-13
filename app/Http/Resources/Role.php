@@ -13,17 +13,12 @@ class Role extends JsonResource
      */
     public function toArray($request)
     {
+        $rolePermission = new RolePermissions($this->rolePermission);
+        $rolePermissions = $rolePermission->toArray($request);
         return [
             'id' => $this->id,
             'name' => $this->name,
-            'role_permission' => $this->rolePermission->map(function ($permission) {
-                return [
-                    'id' => $permission->id,
-                    'role_id' => $permission->role_id,
-                    'module' => $permission->module,
-                    'value' => $permission->value,
-                ];
-            })->toArray(),
+            'role_permission' => $rolePermissions,
         ];
     }
 }
